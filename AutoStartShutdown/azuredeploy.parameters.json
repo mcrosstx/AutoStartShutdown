@@ -3,19 +3,19 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "accountName": {
-      "value": "sandboxautostartshutdown"
+      "value": "mcrossautomation"
     },
     "regionId": {
-      "value": "usgovvirginia"
+      "value": "southcentralus"
     },
     "pricingTier": {
       "value": "free"
     },
     "resourceGroup": {
-      "value": "sandbox_autostartshutdown"
+      "value": "RG-Michael.Cross"
     },
     "subscriptionName": {
-      "value": "CDSS Sandbox Azure"
+      "value": "MAC.WEST.DEVOPS"
     }
   }
 }
