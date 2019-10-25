@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "accountName": {
-      "value": "mcrossautomation"
+      "value": "sandboxautostartshutdown"
     },
     "regionId": {
       "value": "southcentralus"
@@ -12,7 +12,7 @@
       "value": "free"
     },
     "resourceGroup": {
-      "value": "RG-Michael.Cross"
+      "value": "sandbox_autostartshutdown"
     },
     "subscriptionName": {
       "value": "MAC.WEST.DEVOPS"

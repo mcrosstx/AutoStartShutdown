@@ -3,41 +3,42 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "accountName": {
-      "type": "string",
+      "type": "String",
       "defaultvalue": "Automation-AutoStartShutdownVMs",
       "metadata": {
         "description": "A valid Azure Automation Account Name"
       }
     },
     "regionId": {
-      "type": "string",
+      "type": "String",
       "defaultvalue": "usgovvirginia",
       "metadata": {
         "description": "Region of the Azure Automation Account"
       }
     },
     "pricingTier": {
-      "type": "string",
+      "type": "String",
       "defaultvalue": "free",
       "metadata": {
         "description": "Pricing tier for the Azure Automation account"
       }
     },
     "resourceGroup": {
-      "type": "string",
+      "type": "String",
+      "defaultvalue": "[resourceGroup().name]",
       "metadata": {
         "description": "This is the Resource Group that the Automation Account belongs to"
       }
     },
     "subscriptionName": {
-      "type": "string",
+      "type": "String",
       "metadata": {
         "description": "This is the name of the subscription that the Automation Account belongs to"
       }
     },
     "Daily Start Time": {
-      "type": "string",
-      "defaultValue": "2018-01-31T05:00:00-08:00",
+      "type": "String",
+      "defaultValue": "2019-10-25T05:00:00-08:00",
       "metadata": {
         "description": "Enter time for starting VMs by resource group.  This is a recurring daily schedule. Set a datetime (current time zone) that is at least 30 minutes from now.  Schedule will be reflected as UTC in the automation account.",
         "control": "datetime",
@@ -45,8 +46,8 @@
       }
     },
     "startRunbookScheduleJobGuidValue": {
-      "type": "string",
-      "defaultValue": "bc7267ac-3c6d-40c0-bf71-0a97314faaa1",
+      "type": "String",
+      "defaultValue": "[guid('startRunbook',subscription().id,resourceGroup().id,deployment().name)]",
       "metadata": {
         "description": "Enter a unique GUID to enable the start schedule.",
         "control": "guid",
@@ -54,8 +55,8 @@
       }
     },
     "Daily Stop Time": {
-      "type": "string",
-      "defaultValue": "2018-01-31T05:00:00-08:00",
+      "type": "String",
+      "defaultValue": "2019-10-25T05:00:00-08:00",
       "metadata": {
         "description": "Enter time for stopping VMs by resource group.  This is a recurring daily schedule. Set a datetime (current time zone) that is at least 30 minutes from now.  Schedule will be reflected as UTC in the automation account.",
         "control": "datetime",
@@ -63,8 +64,8 @@
       }
     },
     "stopRunbookScheduleJobGuidValue": {
-      "type": "string",
-      "defaultValue": "743e3b0b-7bcd-47af-bbad-4cf67d17647e",
+      "type": "String",
+      "defaultValue": "[guid('stopRunbook',subscription().id,resourceGroup().id,deployment().name)]",
       "metadata": {
         "description": "Enter a unique GUID to enable the stop schedule",
         "control": "guid",
